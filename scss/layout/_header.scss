@@ -1,0 +1,8 @@
+header{
+    @include display;
+    h1{
+        margin: auto;
+        @include font-style(logo);
+    }
+}
+
