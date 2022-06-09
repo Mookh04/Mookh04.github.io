@@ -1,0 +1,31 @@
+@mixin display($width: $general-width){
+    display: flex;
+    flex-direction:column;
+    width: $width;
+    margin: auto;
+}
+
+@mixin font-style ($state) {
+    $style: map-get($font-style, $state);
+
+    font-size: map-get($style, size);
+    font-family: map-get($style, style);
+    font-weight: map-get($style, weight);
+}
+
+@mixin btn ($btn-color: $btn-colorbase){
+    color: white;
+    background-color: $color-secondary;
+    padding:15px 22px 15px 22px;
+    border-radius: 25px;
+    background: $btn-color;
+}
+
+@mixin pseudo-element {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;   
+}
