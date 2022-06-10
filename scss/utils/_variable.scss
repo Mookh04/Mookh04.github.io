@@ -17,4 +17,5 @@ $shadow-btn: 3px 6px 30px darken($color-section, 40);
 $shadow-btn-hover: 5px 4px 10px darken($color-section, 35);
 
 $btn-colorbase: linear-gradient(to bottom , $color-tertiary, $color-secondary);
+$hearth-color: linear-gradient(to top , $color-tertiary, $color-secondary);
 $btn-colorlighten: linear-gradient(to bottom , lighten($color-tertiary, 5), lighten($color-secondary, 5))

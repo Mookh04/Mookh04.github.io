@@ -139,7 +139,6 @@ header h1 {
   z-index: -1;
   opacity: 0;
   transition: opacity 300ms;
-  position: absolute;
   border-radius: 22px;
   background-color: #e4d5f6;
 }
@@ -156,6 +155,9 @@ header h1 {
   color: #777777;
   font-size: 125%;
   margin-right: 28px;
+}
+.menu__content:hover > .menu__content__icon {
+  color: #9356DC;
 }
 
 footer {
@@ -289,6 +291,19 @@ ul li i {
   margin-top: 4px;
   margin-right: 10px;
   font-size: 25px;
+}
+.restaurant__icon .fa-regular {
+  margin-right: -25px;
+}
+.restaurant__icon .fa-solid {
+  color: transparent;
+  transform: scale(0.4);
+  transition: transform 800ms;
+}
+.restaurant__icon .fa-solid:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
 }
 
 #lastcard {

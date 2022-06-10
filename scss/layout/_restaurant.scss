@@ -1,0 +1,116 @@
+.restaurant {
+    @include display;
+    background-color: $color-section;
+    margin-top: $margin-section;
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__heading {
+        width: 90%;
+        margin: auto;
+        margin-bottom: $margin-card;
+        margin-top: $margin-section;
+        @include font-style(heading);
+    }
+
+    &__card {
+        @include display($card-width);
+        background-color: white;
+        margin-bottom: $margin-card;
+        border-radius: 14px;
+        box-shadow: $shadow;
+        overflow: hidden;
+
+        &--last {
+            margin-bottom: $margin-section;
+        }
+    }
+
+    &__topcard {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    &__img {
+        width: 100%;
+
+        & img {
+            object-fit: cover;
+            height: 160px;
+            width: 100%;
+        }
+    }
+
+    &__new {
+        margin-left: -88px;
+        margin-top: 7px;
+        background-color: $color-primary;
+        padding: 5px 10px 2px 10px;
+        height: 20px;
+        color: darken($color-primary, 40);
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Roboto;
+    }
+
+    &__bottomcard {
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+
+        & h2 {
+            @include font-style(hd-menu);
+            margin-bottom: 3px;
+            margin-top: 0;
+            margin-left: 7px;
+            width: 160px
+        }
+
+        & h3 {
+            @include font-style(hd-submenu);
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 7px;
+            width: 157px
+        }
+
+    }
+
+    &__icon {
+        margin-top: 4px;
+        margin-right: 10px;
+        font-size: 25px;
+
+        & .fa-regular {
+            margin-right: -25px;
+        }
+
+        & .fa-solid {
+            color: transparent;
+            transform: scale(0.4);
+            transition: transform 800ms;
+            
+            &:hover{
+                transform: scale(1.1);
+                background: $hearth-color;     
+                -webkit-background-clip: text;       
+            }
+        }
+        
+    }
+}
+
+
+
+#lastcard {
+    margin-bottom: $margin-section;
+}
