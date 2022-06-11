@@ -89,23 +89,6 @@
         margin-top: 4px;
         margin-right: 10px;
         font-size: 25px;
-
-        & .fa-regular {
-            margin-right: -25px;
-        }
-
-        & .fa-solid {
-            color: transparent;
-            transform: scale(0.4);
-            transition: transform 800ms;
-            
-            &:hover{
-                transform: scale(1.1);
-                background: $hearth-color;     
-                -webkit-background-clip: text;       
-            }
-        }
-        
     }
 }
 
