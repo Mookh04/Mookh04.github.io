@@ -4,5 +4,20 @@ header{
         margin: auto;
         @include font-style(logo);
     }
+
+    .omf__heading{
+        display: flex;
+        align-items: center;
+        width: 92%;
+        &__icon{
+            @include font-style(logo);
+            font-size: 26px;
+            padding: 5px 0px 0px 20px;
+        }
+
+        &--allmenu{
+            margin: auto;
+        }
+    }
 }
 

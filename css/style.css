@@ -11,6 +11,21 @@ header h1 {
   font-family: Shrikhand;
   font-weight: 500;
 }
+header .omf__heading {
+  display: flex;
+  align-items: center;
+  width: 92%;
+}
+header .omf__heading__icon {
+  font-size: 32px;
+  font-family: Shrikhand;
+  font-weight: 500;
+  font-size: 26px;
+  padding: 5px 0px 0px 20px;
+}
+header .omf__heading--allmenu {
+  margin: auto;
+}
 
 .area {
   display: flex;
@@ -308,6 +323,10 @@ ul li i {
 
 #lastcard {
   margin-bottom: 50px;
+}
+
+img {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
