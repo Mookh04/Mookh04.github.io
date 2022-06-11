@@ -45,30 +45,5 @@
         }
     }
 
-    &__btn {
-        margin: auto;
-        margin-bottom: 70px;
-        @include font-style(base);
-        @include btn;
-        box-shadow: $shadow-btn;
-        z-index: 1;
-        position: relative;
-
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-
-        &::after {
-            @include pseudo-element;
-            @include btn;
-            background: $btn-colorlighten;
-            box-shadow: $shadow-btn-hover;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
-    }
 }
 

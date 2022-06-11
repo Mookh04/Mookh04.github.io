@@ -1,6 +1,6 @@
-@mixin display($width: $general-width){
+@mixin display($width: $general-width ){
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: $width;
     margin: auto;
 }

@@ -1,0 +1,50 @@
+.starter{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-section;
+
+    &__heading{
+        margin-left: 5%;
+        width: 11.5%;
+        padding-bottom: 3px;
+        @include font-style(hd-submenu);
+        border-bottom: 3px solid $color-primary;
+    }
+
+    &__menu{
+        border-radius: 15px;
+        @include display($card-width);
+        justify-content: space-between;
+        padding: 12px 15px 7px 10px;
+        flex-direction: row;
+        background-color: white;
+        margin-bottom: $margin-card;        
+        box-shadow: $shadow;   
+
+        & span{
+            @include font-style(hd-menu);
+            line-height: 22px
+
+        }
+
+        & .food-description{
+            @include font-style(hd-submenu);
+            font-size: 85%;
+        }
+        
+        &__price{
+            padding-top: 25px;
+            
+            & span{
+                font-size: 95%;
+            }
+        }
+    }
+
+    
+}
+
+.last-starter{
+    margin-bottom: $margin-section;
+}
+

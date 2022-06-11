@@ -77,42 +77,6 @@ header .omf__heading--allmenu {
 .area__heading h3 span {
   padding-left: 44px;
 }
-.area__btn {
-  margin: auto;
-  margin-bottom: 70px;
-  font-size: 16px;
-  font-family: Roboto;
-  font-weight: 500;
-  color: white;
-  background-color: #9356DC;
-  padding: 15px 22px 15px 22px;
-  border-radius: 25px;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  box-shadow: 3px 6px 30px #909090;
-  z-index: 1;
-  position: relative;
-}
-.area__btn:hover::after {
-  opacity: 1;
-}
-.area__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: white;
-  background-color: #9356DC;
-  padding: 15px 22px 15px 22px;
-  border-radius: 25px;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background: linear-gradient(to bottom, #ff93e1, #a16be0);
-  box-shadow: 5px 4px 10px #9d9d9d;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
 
 .menu {
   display: flex;
@@ -331,9 +295,9 @@ ul li i {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #f6f6f6;
   width: 100%;
   margin: auto;
-  background-color: #f6f6f6;
   margin-top: -55px;
   font-size: 18px;
   font-family: Shrikhand;
@@ -366,6 +330,98 @@ ul li i {
   transform: scale(1.1);
   background: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
+}
+
+.starter {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+.starter__heading {
+  margin-left: 5%;
+  width: 11.5%;
+  padding-bottom: 3px;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+  border-bottom: 3px solid #99E2D0;
+}
+.starter__menu {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 12px 15px 7px 10px;
+  flex-direction: row;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 30px #dddddd;
+}
+.starter__menu span {
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 22px;
+}
+.starter__menu .food-description {
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 85%;
+}
+.starter__menu__price {
+  padding-top: 25px;
+}
+.starter__menu__price span {
+  font-size: 95%;
+}
+
+.last-starter {
+  margin-bottom: 50px;
+}
+
+.base-btn {
+  margin: auto;
+  margin-bottom: 70px;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: white;
+  background-color: #9356DC;
+  padding: 15px 22px 15px 22px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  box-shadow: 3px 6px 30px #909090;
+  z-index: 1;
+  position: relative;
+}
+.base-btn:hover::after {
+  opacity: 1;
+}
+.base-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: #9356DC;
+  padding: 15px 22px 15px 22px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  box-shadow: 5px 4px 10px #9d9d9d;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.base-btn--larger {
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
