@@ -13,3 +13,42 @@
 
 
 
+@keyframes spin{
+    0%{
+        opacity: 1;
+
+    }
+    33%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+    66%{
+        opacity: 1;
+        transform: rotate(720deg);
+    }
+
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(1080deg);
+    }
+}
+
+
+@keyframes bg-page{
+    0%{
+        opacity: 0.8;
+    }
+
+    90%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 0;
+    }
+
+}
