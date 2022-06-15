@@ -1,23 +1,20 @@
 /*Animation apparition */
 
 .menu-transition1{
-    transition: scaleX(1);
     animation-name: menu-transition;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
 }
 
 .menu-transition2{
-    transition: scaleX(1);
     animation-name: menu-transition;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
 }
 
 .menu-transition3{
-    transition: scaleX(1);
     animation-name: menu-transition;
-    animation-duration: 3000ms;
+    animation-duration: rotate 3000ms;
     animation-fill-mode: forwards;
 }
 
