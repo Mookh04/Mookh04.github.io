@@ -1,0 +1,72 @@
+/*Animation apparition */
+
+.menu-transition1{
+    transition: scaleX(1);
+    animation-name: menu-transition;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.menu-transition2{
+    transition: scaleX(1);
+    animation-name: menu-transition;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+.menu-transition3{
+    transition: scaleX(1);
+    animation-name: menu-transition;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+
+/* Animation choix */
+
+ 
+
+.starter__menu {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    &:active{
+        &::after{
+            transform: translateX(-65px);
+            transition: transform 600ms;
+            background-color: $color-primary;
+            width: 20%;
+            margin-left: 100%;
+        }
+    }
+
+    &::after{
+        @include pseudo-element;
+        z-index: -1;
+        position: absolute;
+    }
+
+    &__spin {
+        margin-right: -55px;
+        padding-top: 10px;
+
+        & i {
+            background-color: white;
+            color: $color-primary;
+            font-size: 16px;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+
+    &:active > &__spin{
+        transform: translateX(-60px) rotate(360deg);
+        transition: transform 600ms;
+    }
+
+    &:active > &__price{
+        
+        transform: translateX(-60px);
+        transition: transform 600ms;
+    }
+}
