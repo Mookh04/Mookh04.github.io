@@ -8,7 +8,7 @@
     transition: transform 800ms;
     
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         background: $hearth-color;     
         -webkit-background-clip: text;       
     }

@@ -367,7 +367,7 @@ ul li i {
   font-size: 28px;
 }
 .restaurant-img__heading__icon .fa-regular {
-  margin-right: -28px;
+  margin-right: -27.8px;
 }
 
 .heart-regular {
@@ -380,7 +380,7 @@ ul li i {
   transition: transform 800ms;
 }
 .heart-solid:hover {
-  transform: scale(1);
+  transform: scale(1.05);
   background: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
 }
