@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+}
+
 @keyframes menu-transition {
   0% {
     opacity: 0;
@@ -31,13 +35,21 @@
 }
 @keyframes bg-page {
   0% {
-    opacity: 0.8;
+    opacity: 1;
   }
   90% {
-    opacity: 0.8;
+    opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes visi {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 header {
@@ -368,7 +380,7 @@ ul li i {
   transition: transform 800ms;
 }
 .heart-solid:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   background: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
 }
@@ -421,6 +433,9 @@ ul li i {
 }
 .starter__menu__price span {
   font-size: 95%;
+}
+.starter__menu__price--larger {
+  padding-top: 45px;
 }
 
 .last-starter {
@@ -484,36 +499,24 @@ ul li i {
 
 .menu-transition3 {
   animation-name: menu-transition;
-  animation-duration: rotate 3000ms;
+  animation-duration: 3000ms;
   animation-fill-mode: forwards;
 }
 
 /* Animation choix */
 .starter__menu {
-  z-index: 1;
-  position: relative;
   overflow: hidden;
 }
-.starter__menu:active::after {
-  transform: translateX(-65px);
-  transition: transform 600ms;
-  background-color: #99E2D0;
-  width: 20%;
-  margin-left: 100%;
-}
-.starter__menu::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  position: absolute;
-}
 .starter__menu__spin {
-  margin-right: -55px;
+  margin-right: -115px;
   padding-top: 10px;
+  background-color: #99E2D0;
+  width: 100px;
+  margin-top: -15px;
+  margin-bottom: -10px;
+}
+.starter__menu__spin--larger {
+  padding-top: 20px;
 }
 .starter__menu__spin i {
   background-color: white;
@@ -521,13 +524,19 @@ ul li i {
   font-size: 16px;
   border-radius: 50%;
   padding: 5px;
+  margin-left: 15.5px;
+  margin-top: 13px;
+}
+.starter__menu:active i {
+  transform: rotate(360deg);
+  transition: transform 600ms;
 }
 .starter__menu:active > .starter__menu__spin {
-  transform: translateX(-60px) rotate(360deg);
+  transform: translateX(-65px);
   transition: transform 600ms;
 }
 .starter__menu:active > .starter__menu__price {
-  transform: translateX(-60px);
+  transform: translateX(-50px);
   transition: transform 600ms;
 }
 
@@ -535,14 +544,13 @@ ul li i {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: #353535;
   z-index: 99;
-  animation-name: bg-page;
-  animation-duration: 3000ms;
-  animation-fill-mode: forwards;
+  visibility: hidden;
+  animation: bg-page 3000ms 1 forwards, visi 0s linear 3000ms 1 forwards;
 }
 .loading__spinner {
   width: 50px;
