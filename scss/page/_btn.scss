@@ -24,8 +24,35 @@
     }
 
     &--larger{
-        padding-left: 45px;
-        padding-right: 45px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
         margin-bottom: 80px;
+        margin-top: $margin-section;
+        width: 160px;
     }
+}
+
+
+/* Version tablette */
+
+@include tablet{
+    .base-btn{
+        @include font-style(tablet-base);
+        border-radius: 30px;
+        margin-bottom: 120px;
+
+        &::after{
+            border-radius: 30px;
+        }
+
+        &--larger{
+            width: 200px;
+        }
+    }
+}
+
+.bg-btn{
+    background-color: $color-section;
+    padding: 1px 0px 40px 0px;
 }

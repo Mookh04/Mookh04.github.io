@@ -56,3 +56,38 @@
         }
     }
 }
+
+
+/* Version tablette */
+
+@include tablet {
+
+    .menu {
+        &__heading {
+            @include font-style(tablet-heading);
+        }
+
+
+
+        &__content {
+            font-size: 20px;
+
+        }
+    }
+
+
+}
+
+@include desktop{
+    .menu{
+        &__list{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__content{
+            width: 30%;
+        }
+    }
+}
+

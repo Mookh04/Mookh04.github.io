@@ -47,3 +47,30 @@
 
 }
 
+/* Version tablette */
+
+@include tablet {
+    .area {
+        &__locate {
+            @include font-style(tablet-base);
+            border-top: 4px solid darken($color-section, 15);
+        }
+
+        &__heading {
+
+            & h2 {
+                @include font-style(tablet-heading);
+            }
+
+            & h3 {
+                font-family: Roboto;
+                font-size: 26px;
+                font-weight: 400;
+                
+                & span {
+                    padding-left: 60px;
+                }
+            }
+        }
+    }
+}

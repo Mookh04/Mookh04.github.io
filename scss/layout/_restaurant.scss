@@ -97,3 +97,29 @@
 #lastcard {
     margin-bottom: $margin-section;
 }
+
+
+/* Version tablette */
+
+@include tablet{
+    .restaurant{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        &__heading{
+            @include font-style(tablet-heading);
+        }
+
+        &__card{
+            margin-left: 10%;
+        }
+
+        &__link{
+            width: 48%;
+        }
+    }
+}
+
+
+

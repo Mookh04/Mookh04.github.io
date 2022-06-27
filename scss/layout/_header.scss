@@ -3,21 +3,44 @@ header{
     h1{
         margin: auto;
         @include font-style(logo);
+        padding-top: 10px;
     }
 
     .omf__heading{
         display: flex;
         align-items: center;
         width: 92%;
+        padding-top: 10px;
         &__icon{
             @include font-style(logo);
             font-size: 26px;
             padding: 5px 0px 0px 20px;
+            color: black;
         }
 
         &--allmenu{
             margin: auto;
+            padding-top: 0px;
         }
     }
 }
 
+/* Version tablette */
+
+
+@include tablet {
+
+    header {
+        h1 {
+            @include font-style(tablet-logo);
+            padding-top: 10px;
+        }
+
+        .omf__heading{
+            &__icon{
+                @include font-style(tablet-logo);
+                padding-left: 40px;
+            }
+        }
+    }
+}

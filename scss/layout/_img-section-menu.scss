@@ -8,6 +8,7 @@
         & img {
             object-fit: cover;
             width: 100%;
+            height: 300px;
         }
     }
 
@@ -25,17 +26,35 @@
         border-top-right-radius: 30px;
 
         &__txt{
-            padding-left: 15px;
+            padding-left: 5%;
             padding-top: 5px;
         }
 
         &__icon{
-            padding-right: 30px;
+            padding-right: 5%;
             padding-top: 5px;
             font-size: 28px;
 
             & .fa-regular{
                 margin-right: -27.8px;
+            }
+        }
+    }
+}
+
+/* Version Tablette */
+
+@include tablet {
+    .restaurant-img {
+        &__photo {
+            & img {
+                height: 400px;
+            }
+        }
+
+        &__heading {
+            &__txt {
+                padding-left: 3.5%;
             }
         }
     }

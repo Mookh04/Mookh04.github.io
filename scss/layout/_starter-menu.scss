@@ -20,23 +20,30 @@
         background-color: white;
         margin-bottom: $margin-card;        
         box-shadow: $shadow;   
-
+ 
         &__choice{
-            width: 100%
-        }
-        & span{
-            @include font-style(hd-menu);
-            line-height: 22px;
-        }
+            width:100%; 
+            
 
-        & .food-description{
-            @include font-style(hd-submenu);
-            font-size: 85%;
+            & span{
+                @include font-style(hd-menu);
+                line-height: 22px;
+            }
+    
+            & .food-description{
+                @include font-style(hd-submenu);
+                font-size: 85%;
+            }
+          
         }
+        
+        
         
         &__price{
             padding-top: 25px;  
             padding-right: 30px; 
+            @include font-style(hd-menu);
+            font-size: 95%;
             & span{
                 font-size: 95%;
             }
@@ -50,7 +57,28 @@
     
 }
 
-.last-starter{
-    margin-bottom: $margin-section;
-}
 
+
+/* Version tablette */
+
+@include tablet{
+    .all-starter{
+        display: flex;
+        background-color: $color-section;
+    }
+
+    .starter{
+        width: 30%;
+        margin: auto;
+        
+        &__menu{
+            height: 90px;
+            margin-top: 0px;
+
+
+            &__price{
+                padding-top: 70px;
+            }
+        }
+    }
+}

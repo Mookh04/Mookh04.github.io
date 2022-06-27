@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1280px;
 }
 
 @keyframes menu-transition {
@@ -63,11 +64,13 @@ header h1 {
   font-size: 32px;
   font-family: Shrikhand;
   font-weight: 500;
+  padding-top: 10px;
 }
 header .omf__heading {
   display: flex;
   align-items: center;
   width: 92%;
+  padding-top: 10px;
 }
 header .omf__heading__icon {
   font-size: 32px;
@@ -75,11 +78,28 @@ header .omf__heading__icon {
   font-weight: 500;
   font-size: 26px;
   padding: 5px 0px 0px 20px;
+  color: black;
 }
 header .omf__heading--allmenu {
   margin: auto;
+  padding-top: 0px;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 44px;
+    font-family: Shrikhand;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  header .omf__heading__icon {
+    font-size: 44px;
+    font-family: Shrikhand;
+    font-weight: 500;
+    padding-left: 40px;
+  }
+}
 .area {
   display: flex;
   flex-direction: column;
@@ -131,6 +151,28 @@ header .omf__heading--allmenu {
   padding-left: 44px;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  .area__locate {
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 500;
+    border-top: 4px solid #d0d0d0;
+  }
+  .area__heading h2 {
+    font-size: 32px;
+    font-family: Roboto;
+    font-weight: 600;
+  }
+  .area__heading h3 {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .area__heading h3 span {
+    padding-left: 60px;
+  }
+}
 .menu {
   display: flex;
   flex-direction: column;
@@ -192,6 +234,26 @@ header .omf__heading--allmenu {
   color: #9356DC;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  .menu__heading {
+    font-size: 32px;
+    font-family: Roboto;
+    font-weight: 600;
+  }
+  .menu__content {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu__content {
+    width: 30%;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -234,6 +296,24 @@ ul li i {
   margin-right: 10px;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  .footer__heading h2 {
+    font-family: Shrikhand;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  ul a {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  ul li i {
+    margin-right: 20px;
+  }
+  .handshake {
+    margin-right: 13px;
+  }
+}
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -329,6 +409,25 @@ ul li i {
   margin-bottom: 50px;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurant__heading {
+    font-size: 32px;
+    font-family: Roboto;
+    font-weight: 600;
+  }
+  .restaurant__card {
+    margin-left: 10%;
+  }
+  .restaurant__link {
+    width: 48%;
+  }
+}
 .restaurant-img {
   display: flex;
   flex-direction: column;
@@ -343,6 +442,7 @@ ul li i {
 .restaurant-img__photo img {
   object-fit: cover;
   width: 100%;
+  height: 300px;
 }
 .restaurant-img__heading {
   display: flex;
@@ -358,11 +458,11 @@ ul li i {
   border-top-right-radius: 30px;
 }
 .restaurant-img__heading__txt {
-  padding-left: 15px;
+  padding-left: 5%;
   padding-top: 5px;
 }
 .restaurant-img__heading__icon {
-  padding-right: 30px;
+  padding-right: 5%;
   padding-top: 5px;
   font-size: 28px;
 }
@@ -370,6 +470,15 @@ ul li i {
   margin-right: -27.8px;
 }
 
+/* Version Tablette */
+@media (min-width: 768px) {
+  .restaurant-img__photo img {
+    height: 400px;
+  }
+  .restaurant-img__heading__txt {
+    padding-left: 3.5%;
+  }
+}
 .heart-regular {
   margin-right: -25px;
 }
@@ -415,13 +524,13 @@ ul li i {
 .starter__menu__choice {
   width: 100%;
 }
-.starter__menu span {
+.starter__menu__choice span {
   font-size: 18px;
   font-family: Roboto;
   font-weight: 600;
   line-height: 22px;
 }
-.starter__menu .food-description {
+.starter__menu__choice .food-description {
   font-size: 16px;
   font-family: Roboto;
   font-weight: 400;
@@ -430,6 +539,10 @@ ul li i {
 .starter__menu__price {
   padding-top: 25px;
   padding-right: 30px;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 95%;
 }
 .starter__menu__price span {
   font-size: 95%;
@@ -438,10 +551,24 @@ ul li i {
   padding-top: 45px;
 }
 
-.last-starter {
-  margin-bottom: 50px;
+/* Version tablette */
+@media (min-width: 768px) {
+  .all-starter {
+    display: flex;
+    background-color: #f6f6f6;
+  }
+  .starter {
+    width: 30%;
+    margin: auto;
+  }
+  .starter__menu {
+    height: 90px;
+    margin-top: 0px;
+  }
+  .starter__menu__price {
+    padding-top: 70px;
+  }
 }
-
 .base-btn {
   margin: auto;
   margin-bottom: 70px;
@@ -479,9 +606,33 @@ ul li i {
   transition: opacity 250ms;
 }
 .base-btn--larger {
-  padding-left: 45px;
-  padding-right: 45px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
   margin-bottom: 80px;
+  margin-top: 50px;
+  width: 160px;
+}
+
+/* Version tablette */
+@media (min-width: 768px) {
+  .base-btn {
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-bottom: 120px;
+  }
+  .base-btn::after {
+    border-radius: 30px;
+  }
+  .base-btn--larger {
+    width: 200px;
+  }
+}
+.bg-btn {
+  background-color: #f6f6f6;
+  padding: 1px 0px 40px 0px;
 }
 
 /*Animation apparition */
@@ -524,22 +675,31 @@ ul li i {
   font-size: 16px;
   border-radius: 50%;
   padding: 5px;
-  margin-left: 15.5px;
+  margin-left: 20.5px;
   margin-top: 13px;
 }
-.starter__menu:active i {
+.starter__menu:hover i, .starter__menu :active i {
   transform: rotate(360deg);
   transition: transform 600ms;
 }
-.starter__menu:active > .starter__menu__spin {
-  transform: translateX(-65px);
+.starter__menu:hover > .starter__menu__spin, .starter__menu :active > .starter__menu__spin {
+  transform: translateX(-75px);
   transition: transform 600ms;
 }
-.starter__menu:active > .starter__menu__price {
-  transform: translateX(-50px);
+.starter__menu:hover > .starter__menu__price, .starter__menu :active > .starter__menu__price {
+  transform: translateX(-60px);
   transition: transform 600ms;
 }
 
+/* Version tablette */
+@media (min-width: 768px) {
+  .starter__menu i {
+    margin-top: 36px;
+  }
+  .starter__menu__spin--larger {
+    padding-top: 10px;
+  }
+}
 .loading {
   display: flex;
   justify-content: center;

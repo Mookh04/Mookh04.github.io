@@ -24,6 +24,30 @@ $font-style: (
         style: Roboto,
     ),
 
+    tablet-base: (size: 22px,
+        weight: 500,
+        style: Roboto,
+    ),
+
+    tablet-logo: (size: 44px,
+        weight: 500,
+        style: Shrikhand,
+    ),
+
+    tablet-heading: (size: 32px,
+        weight: 600,
+        style: Roboto,
+    ),
+
+    tablet-hd-menu: (size: 24px,
+        weight: 600,
+        style: Roboto,
+    ),
+
+    tablet-hd-submenu:(size: 22px,
+        weight: 400,
+        style: Roboto,
+    ),
 
 
 );
