@@ -524,6 +524,13 @@ ul li i {
 .starter__menu__choice {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .starter__menu__choice {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .starter__menu__choice span {
   font-size: 18px;
   font-family: Roboto;
@@ -558,15 +565,19 @@ ul li i {
     background-color: #f6f6f6;
   }
   .starter {
-    width: 30%;
+    width: 29%;
     margin: auto;
   }
   .starter__menu {
     height: 90px;
-    margin-top: 0px;
+    border: 2px solid transparent;
+  }
+  .starter__menu:hover {
+    border: 2px solid #99E2D0;
   }
   .starter__menu__price {
     padding-top: 70px;
+    margin-left: -20px;
   }
 }
 .base-btn {
@@ -659,12 +670,15 @@ ul li i {
   overflow: hidden;
 }
 .starter__menu__spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  padding-right: 4px;
+  margin-top: -12px;
+  margin-bottom: -12px;
   margin-right: -115px;
-  padding-top: 10px;
   background-color: #99E2D0;
-  width: 100px;
-  margin-top: -15px;
-  margin-bottom: -10px;
 }
 .starter__menu__spin--larger {
   padding-top: 20px;
@@ -675,29 +689,45 @@ ul li i {
   font-size: 16px;
   border-radius: 50%;
   padding: 5px;
-  margin-left: 20.5px;
-  margin-top: 13px;
 }
-.starter__menu:hover i, .starter__menu :active i {
+.starter__menu:hover i,
+.starter__menu :active i {
   transform: rotate(360deg);
   transition: transform 600ms;
 }
-.starter__menu:hover > .starter__menu__spin, .starter__menu :active > .starter__menu__spin {
-  transform: translateX(-75px);
-  transition: transform 600ms;
-}
-.starter__menu:hover > .starter__menu__price, .starter__menu :active > .starter__menu__price {
-  transform: translateX(-60px);
-  transition: transform 600ms;
+@media (max-width: 767px) {
+  .starter__menu:hover > .starter__menu__spin,
+.starter__menu :active > .starter__menu__spin {
+    margin-right: -20px;
+    transition: margin 600ms;
+  }
+  .starter__menu:hover > .starter__menu__price,
+.starter__menu :active > .starter__menu__price {
+    margin-right: -15px;
+    transition: margin 600ms;
+  }
 }
 
 /* Version tablette */
 @media (min-width: 768px) {
-  .starter__menu i {
-    margin-top: 36px;
+  .starter__menu__spin {
+    background-color: transparent;
+    width: 55px;
+  }
+  .starter__menu__spin i {
+    border: 2px solid #99E2D0;
+    margin-top: 65px;
   }
   .starter__menu__spin--larger {
-    padding-top: 10px;
+    padding-top: 0px;
+  }
+  .starter__menu:hover > .starter__menu__spin, .starter__menu :active > .starter__menu__spin {
+    transform: translateX(-70px);
+    transition: transform 600ms;
+  }
+  .starter__menu:hover > .starter__menu__price, .starter__menu :active > .starter__menu__price {
+    transform: translateX(-40px);
+    transition: transform 600ms;
   }
 }
 .loading {

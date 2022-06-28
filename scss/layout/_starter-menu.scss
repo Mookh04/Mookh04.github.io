@@ -23,6 +23,11 @@
  
         &__choice{
             width:100%; 
+            @media (max-width: 767px){
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
             
 
             & span{
@@ -68,16 +73,23 @@
     }
 
     .starter{
-        width: 30%;
+        width: 29%;
         margin: auto;
+
+       
         
         &__menu{
             height: 90px;
-            margin-top: 0px;
+            border: 2px solid transparent;
+            &:hover{
+                border: 2px solid $color-primary;
+                
+            }
 
 
             &__price{
                 padding-top: 70px;
+                margin-left:-20px;
             }
         }
     }

@@ -1,18 +1,18 @@
 /*Animation apparition */
 
-.menu-transition1{
+.menu-transition1 {
     animation-name: menu-transition;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.menu-transition2{
+.menu-transition2 {
     animation-name: menu-transition;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
 }
 
-.menu-transition3{
+.menu-transition3 {
     animation-name: menu-transition;
     animation-duration: 3000ms;
     animation-fill-mode: forwards;
@@ -21,19 +21,23 @@
 
 /* Animation choix */
 
- 
 
-.starter__menu {  
-            overflow: hidden;
+
+.starter__menu {
+
+overflow: hidden;
     &__spin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        padding-right: 4px;
+        margin-top: -12px;
+        margin-bottom: -12px;
         margin-right: -115px;
-        padding-top: 10px;
         background-color: $color-primary;
-        width: 100px;
-        margin-top: -15px;
-        margin-bottom: -10px;
 
-        &--larger{
+        &--larger {
             padding-top: 20px;
         }
 
@@ -43,30 +47,34 @@
             font-size: 16px;
             border-radius: 50%;
             padding: 5px;
-            margin-left: 20.5px;
-            margin-top: 13px;
         }
     }
 
-    &:hover, :active {
+    &:hover,
+    :active {
         i {
             transform: rotate(360deg);
             transition: transform 600ms;
         }
     }
 
-    &:hover, :active{
-      &  > .starter__menu__spin{
-            transform: translateX(-75px);
-            transition: transform 600ms;
-        }
-    }
+    @media (max-width: 767px) {
 
-    &:hover, :active{
-     &   > .starter__menu__price{
-        
-            transform: translateX(-60px);
-            transition: transform 600ms;
+        &:hover,
+        :active {
+            &>.starter__menu__spin {
+                margin-right: -20px;
+                transition: margin 600ms;
+            }
+        }
+
+        &:hover,
+        :active {
+            &>.starter__menu__price {
+
+                margin-right: -15px;
+                transition: margin 600ms;
+            }
         }
     }
 }
@@ -74,17 +82,40 @@
 
 /* Version tablette */
 
+
+
+
 @include tablet{
     .starter__menu{
-        & i{
-            margin-top: 36px;
-        }
-
         &__spin{
+            background-color: transparent;
+
+            
+            & i{
+                border: 2px solid $color-primary;
+                margin-top: 65px;
+            }
+            width: 55px;
             &--larger{
-                padding-top: 10px;
+                padding-top: 0px;
             }
         }
+
+
+        &:hover, :active{
+            &  > .starter__menu__spin{
+                  transform: translateX(-70px);
+                  transition: transform 600ms;
+              }
+          }
+
+          &:hover, :active{
+            &   > .starter__menu__price{
+               
+                   transform: translateX(-40px);
+                   transition: transform 600ms;
+               }
+           }
+
     }
 }
-
