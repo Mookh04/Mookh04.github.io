@@ -737,9 +737,8 @@ ul li i {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #353535;
+  background-color: white;
   z-index: 99;
-  visibility: hidden;
   animation: bg-page 3000ms 1 forwards, visi 0s linear 3000ms 1 forwards;
 }
 .loading__spinner {
@@ -753,6 +752,11 @@ ul li i {
   animation-name: spin;
   animation-duration: 3000ms;
   animation-fill-mode: forwards;
+}
+@media (min-width: 1280px) {
+  .loading__spinner {
+    margin-right: 600px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
