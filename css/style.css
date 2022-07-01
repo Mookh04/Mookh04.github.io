@@ -186,6 +186,9 @@ header .omf__heading--allmenu {
   font-weight: 600;
   margin-bottom: 20px;
 }
+.menu__list {
+  margin-left: 3%;
+}
 .menu__content {
   display: flex;
   align-items: center;
