@@ -1,9 +1,13 @@
-.starter{
+.starter {
     display: flex;
     flex-direction: column;
     background-color: $color-section;
 
-    &__heading{
+    &--tablet {
+        display: none;
+    }
+
+    &__heading {
         margin-left: 5%;
         margin-bottom: 20px;
         width: 11.5%;
@@ -12,86 +16,132 @@
         border-bottom: 3px solid $color-primary;
     }
 
-    &__menu{
+    &__menu {
         border-radius: 15px;
         @include display($card-width);
         padding: 12px 7px 7px 7px;
         flex-direction: row;
         background-color: white;
-        margin-bottom: $margin-card;        
-        box-shadow: $shadow;   
- 
-        &__choice{
-            width:100%; 
-            padding-left: 7px;
-            @media (max-width: 767px){
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            }
-            
+        margin-bottom: $margin-card;
+        box-shadow: $shadow;
 
-            & span{
+        &__choice {
+            width: 100%;
+            padding-left: 7px;
+
+            @media (max-width: 767px) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+
+            & span {
                 @include font-style(hd-menu);
                 line-height: 22px;
             }
-    
-            & .food-description{
+
+            & .food-description {
                 @include font-style(hd-submenu);
                 font-size: 85%;
             }
-          
+
         }
-        
-        
-        
-        &__price{
-            padding-top: 25px;  
-            padding-right: 45px; 
+
+
+
+        &__price {
+            padding-top: 25px;
+            padding-right: 45px;
+            margin-left: 60px;
             @include font-style(hd-menu);
             font-size: 95%;
-            & span{
+
+            & span {
                 font-size: 95%;
             }
 
-            &--larger{
+            &--larger {
                 padding-top: 45px;
             }
         }
     }
 
-    
+
 }
 
 
 
 /* Version tablette */
 
-@include tablet{
-    .all-starter{
+
+@include tablet {
+
+    .all-starter {
         display: flex;
-        background-color: $color-section;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .starter{
-        width: 29%;
-        margin: auto;
+    .starter {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 50%;
 
-       
-        
-        &__menu{
-            height: 90px;
-            border: 2px solid transparent;
-            &:hover{
-                border: 2px solid $color-primary;
-                
-            }
+        &--tablet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-
-            &__price{
-                padding-top: 70px;
-                margin-left:-20px;
+            & span {
+                @include font-style(logo);
+                color: $color-primary;
             }
         }
+
+        &__heading {
+            width: 7.5%;
+        }
+
+        &__menu {
+            &__price {
+                padding-left: 10%;
+                padding-top: 14%;
+            }
+        }
+    }
+}
+
+
+@include desktop {
+    .all-starter {
+        display: flex;
+        background-color: $color-section;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .starter {
+        width: 33.3%;
+        margin: 0;
+
+
+        &__heading {
+            width: 11.5%;
+        }
+
+        &__menu {
+            height: 90px;
+
+            &__price {
+                padding-top: 70px;
+                padding-left: 10%;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .starter--tablet {
+        display: none;
     }
 }
