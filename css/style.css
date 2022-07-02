@@ -724,6 +724,9 @@ ul li i {
 .starter__menu {
   overflow: hidden;
 }
+.starter__menu__price {
+  transition: margin 600ms;
+}
 .starter__menu__spin {
   display: flex;
   align-items: center;
@@ -733,6 +736,7 @@ ul li i {
   margin-bottom: -12px;
   margin-right: -115px;
   background-color: #99E2D0;
+  transition: margin 600ms;
 }
 .starter__menu__spin i {
   background-color: #99E2D0;
@@ -748,40 +752,50 @@ ul li i {
   .starter__menu:hover > .starter__menu__spin,
 .starter__menu :active > .starter__menu__spin {
     margin-right: -7px;
-    transition: margin 600ms;
   }
   .starter__menu:hover > .starter__menu__price,
 .starter__menu :active > .starter__menu__price {
     margin-right: -30px;
-    transition: margin 600ms;
   }
 }
 
 /* Version tablette */
 @media (min-width: 768px) {
+  .starter__menu__spin {
+    transition: transform 600ms;
+  }
   .starter__menu__spin i {
     margin-right: 5px;
   }
-  .starter__menu:hover > .starter__menu__spin, .starter__menu :active > .starter__menu__spin {
-    transform: translateX(-100px);
+  .starter__menu__price {
     transition: transform 600ms;
   }
-  .starter__menu:hover > .starter__menu__price, .starter__menu :active > .starter__menu__price {
+  .starter__menu:hover > .starter__menu__spin,
+.starter__menu :active > .starter__menu__spin {
+    transform: translateX(-100px);
+  }
+  .starter__menu:hover > .starter__menu__price,
+.starter__menu :active > .starter__menu__price {
     transform: translateX(-70px);
-    transition: transform 600ms;
   }
 }
 @media (min-width: 1024px) {
+  .starter__menu__spin {
+    transition: transform 600ms;
+  }
   .starter__menu__spin i {
     margin-right: 28px;
   }
-  .starter__menu:hover > .starter__menu__spin, .starter__menu :active > .starter__menu__spin {
-    transform: translateX(-80px);
+  .starter__menu__price {
     transition: transform 600ms;
   }
-  .starter__menu:hover > .starter__menu__price, .starter__menu :active > .starter__menu__price {
+  .starter__menu:hover > .starter__menu__spin,
+.starter__menu :active > .starter__menu__spin {
+    transform: translateX(-80px);
+  }
+  .starter__menu:hover > .starter__menu__price,
+.starter__menu :active > .starter__menu__price {
     transform: translateX(-50px);
-    transition: transform 600ms;
   }
 }
 .loading {
