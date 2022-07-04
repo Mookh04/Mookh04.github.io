@@ -1,5 +1,6 @@
 header{
     @include display;
+    box-shadow: 0px 4px 0px darken($color-section,15);
     h1{
         margin: auto;
         @include font-style(logo);

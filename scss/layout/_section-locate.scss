@@ -10,7 +10,6 @@
         padding: 10px 0px 10px 0px;
         @include font-style(base);
         background-color: darken($color-section, 5);
-        border-top: 3px solid darken($color-section, 15);
 
         &__icon {
             margin-right: 20px;
@@ -53,7 +52,6 @@
     .area {
         &__locate {
             @include font-style(tablet-base);
-            border-top: 4px solid darken($color-section, 15);
         }
 
         &__heading {
