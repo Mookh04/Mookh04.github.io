@@ -41,7 +41,7 @@
         width: 120px;
         margin-top: -12px;
         margin-bottom: -12px;
-        margin-right: -115px;
+        margin-right: -125px;
         background-color: $color-primary;
         transition: margin 600ms;
 
@@ -50,6 +50,7 @@
             background-color: $color-primary;
             color: white;
             font-size: 24px;
+            margin-right: 23px;
         }
     }
 
@@ -66,7 +67,7 @@
         &:hover,
         :active {
             &>.starter__menu__spin {
-                margin-right: -7px;
+                margin-right: -30px;
 
             }
         }
@@ -75,7 +76,7 @@
         :active {
             &>.starter__menu__price {
 
-                margin-right: -30px;
+                margin-right: -10px;
 
             }
         }
@@ -93,7 +94,7 @@
             transition: transform 600ms;
 
             & i {
-                margin-right: 5px;
+                margin-right: 45px;
             }
         }
 
@@ -104,14 +105,14 @@
         &:hover,
         :active {
             &>.starter__menu__spin {
-                transform: translateX(-100px);
+                transform: translateX(-70px);
             }
         }
 
         &:hover,
         :active {
             &>.starter__menu__price {
-                transform: translateX(-70px);
+                transform: translateX(-60px);
             }
         }
 
@@ -121,12 +122,15 @@
 
 @include desktop {
     .starter__menu {
+        &__price{
+            padding-right: 40px;
+        }
 
         &__spin {
             transition: transform 600ms;
 
             & i {
-                margin-right: 28px;
+                margin-right: 36px;
             }
         }
 
