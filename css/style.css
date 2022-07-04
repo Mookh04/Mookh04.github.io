@@ -126,6 +126,10 @@ header .omf__heading--allmenu {
 .area__locate__icon {
   margin-right: 20px;
 }
+.area__btn a {
+  text-decoration: none;
+  color: white;
+}
 .area__heading {
   display: flex;
   flex-direction: column;

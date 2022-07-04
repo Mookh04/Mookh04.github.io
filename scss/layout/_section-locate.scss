@@ -16,6 +16,13 @@
         }
     }
 
+    &__btn{
+        & a{
+            text-decoration: none;
+            color: white
+        }
+    }
+
     &__heading {
         @include display;
         margin-top: $margin-section;
