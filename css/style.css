@@ -712,21 +712,18 @@ ul li i {
   animation-name: menu-transition;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
-  animation-delay: 2700ms;
 }
 
 .menu-transition2 {
   animation-name: menu-transition;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
-  animation-delay: 2700ms;
 }
 
 .menu-transition3 {
   animation-name: menu-transition;
   animation-duration: 3000ms;
   animation-fill-mode: forwards;
-  animation-delay: 2700ms;
 }
 
 /* Animation choix */
