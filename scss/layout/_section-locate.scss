@@ -10,6 +10,7 @@
         padding: 10px 0px 10px 0px;
         @include font-style(base);
         background-color: darken($color-section, 5);
+        box-shadow: inset 0px 3px darken($color-section, 15);
 
         &__icon {
             margin-right: 20px;
